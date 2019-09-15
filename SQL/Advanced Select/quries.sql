@@ -75,3 +75,34 @@ SELECT
         )
     )
 FROM bst ORDER BY n;
+
+
+
+/***********************************************************************************
+ *____________________________New Companies________________________________________*
+ * Given the table schemas below, write a query to print the company_code, founder *
+ * name, total number of lead managers, total number of senior managers, total     *
+ * number of managers, and total number of employees. Order your output by         *
+ * ascending company_code.                                                         *
+ ***********************************************************************************/
+SELECT 
+    cmp.company_code,
+    cmp.founder,
+    emp.l_mngr,
+    emp.s_mngr,
+    emp.mngr,
+    emp.emps
+FROM
+    (SELECT 
+        DISTINCT company_code,
+        COUNT(DISTINCT employee_code) AS emps,
+        COUNT(DISTINCT manager_code) AS mngr,
+        COUNT(DISTINCT senior_manager_code) AS s_mngr,
+        COUNT(DISTINCT lead_manager_code) AS l_mngr
+    FROM
+        employee
+    GROUP BY company_code) AS emp,
+    company AS cmp
+WHERE
+    cmp.company_code = emp.company_code
+ORDER BY cmp.company_code;
