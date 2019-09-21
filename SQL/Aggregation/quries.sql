@@ -20,3 +20,12 @@ SELECT SUM(population) as total_population FROM city WHERE district = 'californi
  ***********************************************************************************/
 
 SELECT AVG(population) as avg_population FROM city WHERE district = 'california';
+
+
+/***********************************************************************************
+ *_____________________________Average Population__________________________________*
+ * Query the average population for all cities in CITY,rounded down to the nearest *
+ * integer.                                                                        *
+ ***********************************************************************************/
+
+SELECT ROUND(AVG(population)) as avg_population FROM city;
