@@ -4,3 +4,11 @@
  ***********************************************************************************/
 
 SELECT COUNT(name) FROM city WHERE population > 100000;
+
+
+/***********************************************************************************
+ *__________________Revising Aggregations - The Sum Function_______________________*
+ * Query the total population of all cities in CITY where District is California.  *
+ ***********************************************************************************/
+
+SELECT SUM(population) as total_population FROM city WHERE district = 'california';
