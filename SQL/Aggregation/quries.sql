@@ -109,3 +109,19 @@ FROM
 WHERE
     lat_n > 38.7880 AND  lat_n < 137.2345;
 
+
+/***********************************************************************************
+ *_________________________Weather Observation Station 14__________________________*
+ * https://www.hackerrank.com/challenges/weather-observation-station-14/problem    *
+ *---------------------------------------------------------------------------------*
+ * Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is *
+ * less than . Truncate your answer to  decimal places.                            *
+ ***********************************************************************************/
+
+SELECT
+    ROUND(MAX(lat_n), 4)
+FROM
+    station
+WHERE
+    lat_n < 137.2345;
+
