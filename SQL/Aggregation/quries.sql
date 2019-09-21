@@ -29,3 +29,12 @@ SELECT AVG(population) as avg_population FROM city WHERE district = 'california'
  ***********************************************************************************/
 
 SELECT ROUND(AVG(population)) as avg_population FROM city;
+
+
+/***********************************************************************************
+ *_______________________________Japan Population__________________________________*
+ * Query the sum of the populations for all Japanese cities in CITY.               *
+ * The COUNTRYCODE for Japan is JPN.                                               *
+ ***********************************************************************************/
+
+SELECT SUM(population) as total_population FROM city WHERE countrycode = 'JPN';
