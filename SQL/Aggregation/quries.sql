@@ -148,3 +148,18 @@ WHERE
             lat_n < 137.2345
     );
 
+
+/***********************************************************************************
+ *_________________________Weather Observation Station 16__________________________*
+ * https://www.hackerrank.com/challenges/weather-observation-station-16/problem    *
+ *---------------------------------------------------------------------------------*
+ * Query the smallest Northern Latitude (LAT_N) from STATION that is greater than. * 
+ * Round your answer to 4 decimal places.                                          *
+ ***********************************************************************************/
+SELECT
+    ROUND(MIN(lat_n), 4)
+FROM
+    station
+WHERE
+    lat_n > 38.7780;
+
