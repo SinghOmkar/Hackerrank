@@ -38,3 +38,12 @@ SELECT ROUND(AVG(population)) as avg_population FROM city;
  ***********************************************************************************/
 
 SELECT SUM(population) as total_population FROM city WHERE countrycode = 'JPN';
+
+
+/***********************************************************************************
+ *______________________Population Density Difference______________________________*
+ * Query the difference between the maximum and minimum populations in CITY.       *
+ ***********************************************************************************/
+
+SELECT (MAX(population) - MIN(population)) as population_diff FROM city;
+
