@@ -47,3 +47,13 @@ SELECT SUM(population) as total_population FROM city WHERE countrycode = 'JPN';
 
 SELECT (MAX(population) - MIN(population)) as population_diff FROM city;
 
+
+/***********************************************************************************
+ *__________________________________The Blunder____________________________________*
+ ***********************************************************************************/
+
+SELECT
+    CEIL(
+        (AVG(salary)) - (AVG(REPLACE(salary, '0', '')))
+    ) AS avg_salary
+FROM employees;
