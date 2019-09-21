@@ -12,3 +12,11 @@ SELECT COUNT(name) FROM city WHERE population > 100000;
  ***********************************************************************************/
 
 SELECT SUM(population) as total_population FROM city WHERE district = 'california';
+
+
+/***********************************************************************************
+ *_____________________Revising Aggregations - Averages____________________________*
+ * Query the average population of all cities in CITY where District is California.*
+ ***********************************************************************************/
+
+SELECT AVG(population) as avg_population FROM city WHERE district = 'california';
